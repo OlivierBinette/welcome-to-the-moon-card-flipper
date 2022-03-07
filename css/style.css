@@ -32,8 +32,6 @@ table {
     border-color: grey;
     border-width: 2px;
     border-radius: 10px;
-    border-style: outset;
-    box-shadow: 0.5px 1px grey;
     width:100px
 }
 
@@ -41,6 +39,11 @@ table {
     color:rgba(0,0,0,0); border:1px solid white;
     background-color: transparent;
     opacity: 15%;
+    border-style: solid;
+    border-color: grey;
+    border-width: 2px;
+    border-radius: 10px;
+
 
     -webkit-touch-callout: none; /* iOS Safari */
         -webkit-user-select: none; /* Safari */
