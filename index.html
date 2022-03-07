@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<title>"Welcome to the Moon" Card flipper</title>
+        <link rel="stylesheet" type="text/css" href="css/buttons.css">
+        <link rel="stylesheet" type="text/css" href="css/input.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/stars.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=MuseoModerno:wght@410&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	</head>
+	<body>
+    
+
+    <canvas id="starfield" width="2000px" height="2000px"></canvas>
+
+    <div class="center">
+    
+    <div id="main-table">
+        <div id="title">
+            <div id="title-1">Welcome</div>
+            <div id="title-2">To The Moon</div>
+        </div>
+        <table id="flip-table">
+            <tr id="top-row" class="card-row">
+                <td>
+                    <div class="card">
+                        <span class="action-hint">🤖</span>
+                        <span class="number">1</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="card">
+                        <span class="action-hint">🌱</span>
+                        <span class="number">2</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="card">
+                        <span class="action-hint">🧑‍🚀</span>
+                        <span class="number">3</span>
+                    </div>
+                </td>
+            </tr>
+            <tr id="bottom-row" class="card-row">
+                <td>
+                    <div class="card">
+                        <span class="action">💧</span>
+                    </div> 
+                </td>
+                <td>
+                    <div class="card">
+                        <span class="action">🧑‍🚀</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="card">
+                        <span class="action">📅</span>
+                    </div>
+                </td> 
+            </tr>  
+        </table>  
+  
+        <table>
+            <tr>
+                <td>
+                    <button id="shuffle-button" type="button" class="btn btn-warning" onclick="shuffle(decks, discards)">♻️ Shuffle</button>
+                </td>   
+   
+                <td>
+                    <button id="flip-button" type="button" class="btn btn-info" onclick="flip(decks, discards)">⤵ Flip!</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </div>
+
+    <script src="src/deck.js"></script>
+    <script src="src/main.js"></script>
+    <script src="src/stars.js"></script>
+
+	</body>
+</html>

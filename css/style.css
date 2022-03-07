@@ -1,0 +1,116 @@
+body {
+    font-size: 46pt;
+    font-family: 'MuseoModerno', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+    overflow: hidden;
+}
+
+table {
+    font-size: inherit;
+    font-family: inherit;
+    text-align: center;
+    border-collapse:separate; 
+    border-spacing: 20px;
+    width: 100%;
+}
+
+#main-table {
+    max-width: 600px;
+}
+
+.card {
+    background: linear-gradient(-45deg, rgb(189, 184, 169), 5%, rgb(248, 247, 242));
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-style: solid;
+    border-color: grey;
+    border-width: 2px;
+    border-radius: 10px;
+    border-style: outset;
+    box-shadow: 0.5px 1px grey;
+    width:100px
+}
+
+.empty {
+    color:rgba(0,0,0,0); border:1px solid white;
+    background-color: transparent;
+    opacity: 15%;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+      
+}
+
+
+
+.action-hint {
+    font-size: 24pt;
+    float: right;    
+    position:relative;
+    right:25px;
+    top: -35px;
+    width: 0px;
+} 
+
+.btn {
+    width:200px;
+    margin:0;
+}
+
+#seed-input {
+    width:150px;
+}
+
+#starfield {
+    z-index: -1;
+    position: fixed;
+    resize: both;
+    overflow: auto;
+}
+
+#title {
+    color: rgb(240, 236, 219);
+    transform: rotate(-10deg);
+    margin-top: -100px;
+}
+
+#title-1 {
+    font-family: 'Dancing Script', cursive;    
+    font-size: 92pt;
+    text-shadow: 0.5px 0.5px #e60073;
+}
+
+#title-2 {
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 36pt;
+    text-align: right;
+    font-style: italic;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    margin-top: -20px;
+    margin-right: 20px;
+}
+
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 40px #e60073, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6, 0 0 40px #ff4da6;
+    }
+  }
+  
