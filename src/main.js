@@ -1,14 +1,25 @@
 
-components = makeComponents();
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+seed = urlParams.get('seed')
+if (seed == "") {
+    seed = Math.random();
+}
+
+const rng = new Math.seedrandom(seed);
+
+
+components = makeComponents(rng);
 decks = components["decks"];
 discards = components["discards"];
 
-display(decks, discards)
+display(decks, discards);
 
 
-function makeComponents() {
+
+function makeComponents(rng) {
     const deck = Deck.BASE_DECK;
-    deck.shuffle();
+    deck.shuffle(rng);
 
     const decks = deck.split(3);
     const discards = [new Deck(), new Deck(), new Deck()];
@@ -30,8 +41,7 @@ function enableButtons(decks, discards) {
         document.getElementById("back-button").disabled = false;
     } else {
         document.getElementById("back-button").disabled = true;
-    } 
-
+    }
 }
 
 function display(decks, discards) {
@@ -86,7 +96,7 @@ function unflip(decks, discards) {
 
 
 function shuffle(decks, discards) {
-    components = makeComponents();
+    components = makeComponents(rng);
     
     for (var c = 0; c < 3; c++) {
         delete decks[c].cards;
