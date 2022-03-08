@@ -67,7 +67,7 @@ function display(decks, discards) {
         table.rows[1].cells[c].innerHTML = html;
     }
 
-    document.getElementById('flip-button').innerHTML = "⤵ Flip! ("+decks[0].cards.length+" left)";
+    document.getElementById('flip-button').innerHTML = "<i class='fa-solid fa-arrow-turn-down'></i> Flip! ("+decks[0].cards.length+" left)";
 
     enableButtons(decks, discards);
 }
