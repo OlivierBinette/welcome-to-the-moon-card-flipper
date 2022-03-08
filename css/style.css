@@ -32,7 +32,8 @@ table {
     border-color: grey;
     border-width: 2px;
     border-radius: 10px;
-    width:100px
+    width:100px;
+    height:80px;
 }
 
 .empty {
@@ -62,9 +63,9 @@ table {
     float: right;    
     position:relative;
     right:25px;
-    top: -35px;
+    top: -15px;
     width: 0px;
-} 
+}
 
 .btn {
     width:200px;
