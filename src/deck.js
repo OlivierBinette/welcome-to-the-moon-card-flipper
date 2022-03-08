@@ -1,4 +1,27 @@
 
+function iconHTML(icon) {
+    if (icon == "🤖") {
+        return '<i class="fa-solid fa-robot"></i>';
+    }
+    if (icon == "📅") {
+        return '<i class="fa-solid fa-calendar-days"></i>';
+    }
+    if (icon == "🌱") {
+        return '<i class="fa-solid fa-seedling"></i>';
+    }
+    if (icon == "⚡") {
+        return '<i class="fa-solid fa-bolt"></i>';
+    }
+    if (icon == "🧑‍🚀") {
+        return '<i class="fa-solid fa-user-astronaut"></i>';
+    }
+    if (icon == "💧") {
+        return '<i class="fa-solid fa-droplet"></i>';
+    }
+
+    return '0';
+}
+
 class Card {
 
     static EMPTY_FRONT_HTML = `<div class="card empty">
@@ -20,14 +43,14 @@ class Card {
 
     frontHTML() {
         return `<div class="card">
-            <span class="action-hint">` + this.back + `</span>
+            <span class="action-hint">` + iconHTML(this.back) + `</span>
             <span class="number">` + this.front + `</span>
         </div>`;
     }
 
     backHTML() {
         return `<div class="card">
-            <span class="action">`+this.back+`</span>
+            <span class="action">`+iconHTML(this.back)+`</span>
         </div> `
     }
 

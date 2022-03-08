@@ -120,4 +120,27 @@ table {
       text-shadow: 0 0 5px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6, 0 0 40px #ff4da6;
     }
   }
-  
+
+.fa-robot {
+    color: grey;
+}
+
+.fa-calendar-days {
+    color: rgb(255, 94, 121);
+}
+
+.fa-seedling {
+    color:rgb(12, 141, 12);
+}
+
+.fa-bolt {
+    color:purple;
+}
+
+.fa-user-astronaut {
+    color:rgb(255, 123, 0);
+}
+
+.fa-droplet {
+    color: rgb(62, 123, 255);
+}
