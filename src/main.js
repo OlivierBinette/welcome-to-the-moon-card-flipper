@@ -19,6 +19,21 @@ function makeComponents() {
     }
 }
 
+function enableButtons(decks, discards) {
+    if (decks[0].cards.length > 0) {
+        document.getElementById("flip-button").disabled = false;
+    } else {
+        document.getElementById("flip-button").disabled = true;
+    }
+
+    if (discards[0].cards.length > 0) {
+        document.getElementById("back-button").disabled = false;
+    } else {
+        document.getElementById("back-button").disabled = true;
+    } 
+
+}
+
 function display(decks, discards) {
     var table = document.getElementById('flip-table');
 
@@ -43,6 +58,8 @@ function display(decks, discards) {
     }
 
     document.getElementById('flip-button').innerHTML = "⤵ Flip! ("+decks[0].cards.length+" left)";
+
+    enableButtons(decks, discards);
 }
 
 function flip(decks, discards) {
@@ -55,6 +72,18 @@ function flip(decks, discards) {
 
     display(decks, discards);
 }
+
+function unflip(decks, discards) {
+    for (var c = 0; c < 3; c++) {
+        card = discards[c].draw();
+        if (card) {
+            decks[c].push(card);
+        }
+    }
+
+    display(decks, discards);
+}
+
 
 function shuffle(decks, discards) {
     components = makeComponents();

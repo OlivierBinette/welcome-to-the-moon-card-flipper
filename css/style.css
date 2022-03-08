@@ -71,8 +71,12 @@ table {
     margin:0;
 }
 
+#back-button {
+    width:100px;
+}
+
 #seed-input {
-    width:150px;
+    width:120px;
 }
 
 #starfield {
